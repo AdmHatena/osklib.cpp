@@ -76,4 +76,15 @@ PS > ./command.exe 1st 2nd 3rd 4th
 2nd
 3rd
 4th
+PS > ./command.exe 1st --name hage 2nd -o output 3rd
+1st
+2nd
+3rd
 ```
+
+
+### std::string osk::CmdLineArgs::getOption(std::string key);
+### int osk::CmdLineArgs::getArgumentLength();
+### std::vector\<std::string\> getArguments();
+### std::unordered_map\<std::string, std::string\> getOptions();
+### compare
