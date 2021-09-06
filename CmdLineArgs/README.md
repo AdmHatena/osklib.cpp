@@ -30,16 +30,16 @@ and compile with option "-std=c++20", "-Wl CmdLineArgs.a" on gcc10 or over.
 ### constructor
 ```cpp
 int main(int argc, char *argv[]){
-  osk::CmdLineArgs args(int argc, char *argv[]);
+  osk::CmdLineArgs args(argc, argv);
 }
 ```
 passes the arguments of the main function, int argc and char *argv[], directly to the constructor.
-
+@
 ### std::string osk::CmdLineArgs::getPath();
 ```cpp
 // command.cpp
 int main(int argc, char *argv[]){
-  osk::CmdLineArgs args(int argc, char *argv[]);
+  osk::CmdLineArgs args(argc, argv);
   std::cout << "Path: \"" << args.getPath() << "\"" << std::endl;
 }
 ```
@@ -64,7 +64,7 @@ return the path of the program (executable binary) itself.
 ```cpp
 // command.cpp
 int main(int argc, char *argv[]){
-  osk::CmdLineArgs args(int argc, char *argv[]);
+  osk::CmdLineArgs args(argc, argv);
   for(int index = 0; index < argc; index++){
     std::cout << args.getArgument(index) << std::endl;
   }
