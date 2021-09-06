@@ -1,0 +1,1 @@
+@g++ -shared -o CmdLineArgs.a CommandLineArguments.cpp -std=c++20
